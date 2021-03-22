@@ -171,6 +171,7 @@ ul {
     background-color: #fff;
     padding: 17px 15px;
     position: fixed;
+    z-index: 9999;
 }
 
 .notic-itemList {
@@ -261,6 +262,81 @@ ul {
 .notificationHideIconMenu ul>li>a>span {
     margin-right: 20px;
 }
+
+
+/* profilemenuHiden */
+
+.profilemenuHiden {
+    width: 325px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 28;
+    top: -1px !important;
+    right: 56px;
+    bottom: 0px;
+    transition-property: visibility;
+    transition-duration: 0ms;
+    touch-action: pan-y;
+    visibility: visible;
+}
+
+.profilemenuHiden:hover {
+    overflow-y: auto;
+}
+
+.profilemenuHiden-heading-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profilemenuHiden-heading-text {
+    padding-left: 20px;
+}
+
+.profilemenuHiden-heading-text .heading {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.profilemenuHiden-heading-text a {
+    color: #075eff;
+}
+
+
+.profilemenuHiden-heading {
+    width: 325px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+
+.profilemenuHiden-content {
+    padding: 30px 0px;
+    text-align: start;
+}
+
+.profilemenuHiden-content ul>li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.profilemenuHiden-content ul>li>a {
+    padding: 0.5rem 1.5rem;
+}
+
+.profilemenuHiden-content ul>li>a>span {
+    margin-right: 15px;
+}
+
+.profilemenuHiden-content ul>li>a {
+    padding: 0.5rem 1.5rem;
+}
+
+
+
 
 /*=====================================> main-content <=================================*/
 
@@ -477,7 +553,7 @@ ul {
     width: 80%;
     height: auto;
     position: absolute;
-    bottom: -36%;
+    bottom: -29%;
     right: 0px;
     content: "";
     outline: none;
@@ -485,6 +561,7 @@ ul {
     background-color: #fff;
     border: 1px solid #e0dcdc;
     padding: 5px 0;
+    border-radius: 3px;
 }
 
 .cardIconMenu ul>li {
@@ -558,6 +635,11 @@ ul {
 }
 
 @media only screen and (max-width: 540px) {
+
+    .main-contentTop-slider {
+        top: 50px;
+    }
+
     .Srearchform-area {
         display: none;
     }
@@ -631,6 +713,15 @@ ul {
         width: 352px;
         top: 50px !important;
         right: 15px;
+    }
+
+    .profilemenuHiden-heading {
+        width: 300px;
+    }
+
+    .profilemenuHiden {
+        width: 300px;
+        right: 56px;
     }
 
 }

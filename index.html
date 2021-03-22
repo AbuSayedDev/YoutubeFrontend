@@ -77,7 +77,7 @@
                                 <div class="dropdown show">
                                     <li id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="bottom" title="Youtube apps"><a href="#"><i class="fas fa-th fas-icon"></i></a></li>
                                     
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1" id="dropdownMenu1">
+                                    <div class="dropdown-menu" id="dropdownMenu1">
                                       <a class="dropdown-item" href="#"><span><i class="fab fa-youtube"></i></span>YouTube TV</a>
                                       <a class="dropdown-item" href="#"><span><i class="fab fa-youtube"></i></span>YouTube Music</a>
                                       <a class="dropdown-item" href="#"><span><i class="fab fa-youtube"></i></span>YouTube Kids</a>
@@ -85,7 +85,6 @@
                                       <a class="dropdown-item" href="#"><span><i class="fab fa-youtube"></i></span>YouTube for Artists</a>
                                     </div>
                                 </div>
-
 
                                
                                 <div class="dropdown show">
@@ -130,9 +129,52 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
-                                <li><a href="#"><img src="asstes/img/chanel.jpg" alt="images"></a></li>
+
+                                <!-- profilemenu -->
+                                <div class="dropdown show">
+                                    <li id="profilemenu" onclick="profilemenu(event); " ><a href="#"><img src="asstes/img/chanel.jpg" alt="images"></a></li>
+                                    
+                                    <div class="profilemenuHiden" id="profilemenuHiden">
+                                        <div class="card profilemenuHiden-card">
+
+                                            <div class="card-header profilemenuHiden-heading d-flex justify-content-start">
+                                                <div class="profilemenuHiden-heading-img">
+                                                    <img src="asstes/img/chanel.jpg" alt="img">
+                                                </div>
+                                                <div class="profilemenuHiden-heading-text">
+                                                    <p class="heading">Abu Sayed</p>
+                                                    <p>Abusayed285235@gmail.com</p>
+                                                    <a href="#">Manage your Google Account</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body profilemenuHiden-content">
+                                                <ul>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-user fas-icon"></i></span> Your channel</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-dollar-sign fas-icon"></i></span> Purchases and memberships</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-cog fas-icon"></i></span> YouTube Studio</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-user fas-icon"></i></span> Your channel</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-dollar-sign fas-icon"></i></span> Purchases and memberships</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-cog fas-icon"></i></span> YouTube Studio</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-user fas-icon"></i></span> Your channel</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-dollar-sign fas-icon"></i></span> Purchases and memberships</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-cog fas-icon"></i></span> YouTube Studio</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-user fas-icon"></i></span> Your channel</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-dollar-sign fas-icon"></i></span> Purchases and memberships</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-cog fas-icon"></i></span> YouTube Studio</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-user fas-icon"></i></span> Your channel</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-dollar-sign fas-icon"></i></span> Purchases and memberships</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-cog fas-icon"></i></span> YouTube Studio</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-user fas-icon"></i></span> Your channel</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-dollar-sign fas-icon"></i></span> Purchases and memberships</a></li>
+                                                    <li><a class="nav-link" href="#"><span><i class="fas fa-cog fas-icon"></i></span> YouTube Studio</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>  
+                        
                             </ul>
                         </div>
                     </div>
@@ -453,10 +495,9 @@
     //nocificationCardItems
     let nicificationCard = document.getElementById("nocificationCardItems");
 
-    for(let i=0; i<12; i++){
+    for(let i=0; i<10; i++){
         nicificationCard.innerHTML +=
             `
-            
                 <div class="notification-Card">
                     <div class="notic-card-list d-flex justify-content-between">
                         <div class="notic-card-logo">
@@ -528,6 +569,20 @@
             notificardList.style.display = "block";
         }else{
             notificardList.style.display = "none";
+        }
+    } 
+
+
+
+    //profilemenu 
+    let profileCard = document.getElementById("profilemenuHiden").style.display = "none";
+
+    function profilemenu(event){
+        let profileCard = document.getElementById("profilemenuHiden");
+        if(profileCard.style.display === "none"){
+            profileCard.style.display = "block";
+        }else{
+            profileCard.style.display = "none";
         }
     } 
 
