@@ -140,6 +140,95 @@ ul {
     left: -23px !important;
 }
 
+
+
+
+
+
+/* notic-wrapper */
+
+.dropdownMenu2 {
+    width: 515px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 28;
+    top: -1px !important;
+    right: 122px;
+    bottom: 0px;
+    transition-property: visibility;
+    transition-duration: 0ms;
+    touch-action: pan-y;
+    visibility: visible;
+
+}
+
+.dropdownMenu2:hover {
+    overflow-y: auto;
+}
+
+.notic-heading {
+    width: 515px;
+    background-color: #fff;
+    padding: 17px 15px;
+    position: fixed;
+}
+
+.notic-itemList {
+    padding: 68px 0 0 0;
+    width: 100%;
+}
+
+.notic-card-list {
+    padding: .75rem 15px !important;
+}
+
+.notic-card-list:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.notic-card-title {
+    padding: 0px 20px;
+    text-align: start;
+}
+
+.notic-card-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.notic-card-title p {
+    margin-bottom: 3px;
+    line-height: 22px;
+    text-align: start;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.notic-card-banner img {
+    width: 90px;
+    height: 55px;
+    padding-right: 15px;
+}
+
+.notic-card-title span {
+    font-size: 12px;
+}
+
+.notic-card-icon {
+    opacity: 0;
+}
+
+.notic-card-list:hover .notic-card-icon {
+    opacity: 1;
+}
+
+
 /*=====================================> main-content <=================================*/
 
 
@@ -161,7 +250,6 @@ ul {
     touch-action: pan-y;
     visibility: visible;
     display: block;
-
     margin-top: var(--ytd-toolbar-height);
 }
 
@@ -352,7 +440,7 @@ ul {
     line-height: 21px;
 }
 
-#cardIconMenu {
+.cardIconMenu {
     width: 80%;
     height: auto;
     position: absolute;
@@ -366,15 +454,15 @@ ul {
     padding: 5px 0;
 }
 
-#cardIconMenu ul>li {
+.cardIconMenu ul>li {
     padding: 4px 15px;
 }
 
-#cardIconMenu ul>li:hover {
+.cardIconMenu ul>li:hover {
     background-color: #E5E5E5;
 }
 
-#cardIconMenu ul>li>a {
+.cardIconMenu ul>li>a {
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
@@ -382,20 +470,11 @@ ul {
 
 }
 
-#cardIconMenu ul>li>a>span {
+.cardIconMenu ul>li>a>span {
     margin-right: 20px;
 }
 
 
-
-/* 
-@media only screen and (min-width: 768px) {
-
-
-    .search-area .recoding-icon .fas-icon {
-        margin-left: -55px;
-    }
-} */
 
 @media only screen and (max-width: 1024px) {
 
@@ -425,6 +504,42 @@ ul {
     .main-content-area {
         padding: 0px 0px 0px 0px;
     }
+
+    .main-contentTop-slider {
+        top: 53px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .notic-heading {
+        width: 460px;
+    }
+
+    .dropdownMenu2 {
+        width: 460px;
+        top: -1px !important;
+        right: 100px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .Srearchform-area {
+        display: none;
+    }
+
+    .notic-heading {
+        width: 512px;
+    }
+
+    .dropdownMenu2 {
+        width: 512px;
+        top: 50px !important;
+        right: 15px;
+        background-color: green
+    }
+
 }
 
 
@@ -462,6 +577,32 @@ ul {
     #dropdownMenu1 {
         left: -30px !important;
     }
+
+
+    .notic-heading {
+        width: 400px;
+    }
+
+    .dropdownMenu2 {
+        width: 400px;
+        top: 50px !important;
+        right: 7px;
+        background-color: red;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .notic-heading {
+        width: 352px;
+    }
+
+    .dropdownMenu2 {
+        width: 352px;
+        top: 50px !important;
+        right: 15px;
+        background-color: green
+    }
+
 }
 
 @media only screen and (max-width: 360px) {
@@ -473,5 +614,16 @@ ul {
 
     #dropdownMenu1 {
         left: -60px !important;
+    }
+
+    .notic-heading {
+        width: 350px;
+    }
+
+    .dropdownMenu2 {
+        width: 350px;
+        top: 50px !important;
+        right: 4px;
+        background-color: red;
     }
 }
