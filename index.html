@@ -453,30 +453,38 @@
     //nocificationCardItems
     let nicificationCard = document.getElementById("nocificationCardItems");
 
-    for(let i=0; i<10; i++){
+    for(let i=0; i<2; i++){
         nicificationCard.innerHTML +=
             `
             
-                <a href="#">
+                <div class="notification-Card">
                     <div class="notic-card-list d-flex justify-content-between">
                         <div class="notic-card-logo">
-                            <img src="asstes/img/chanel.jpg" alt="images">
+                            <a href="#"><img src="asstes/img/chanel.jpg" alt="images"></a>
                         </div>
 
                         <div class="notic-card-title">
-                            <p>Tomake Chai | Cover | Dristy Anam | Tonmay Mahabubul | Fagun Haway(2019)Tomake Chai | Cover | Dristy Anam | Tonmay Mahabubul | Fagun Haway(2019)</p>
-                            <span>2 hours ago</span>
+                            <a href="#"><p>Tomake Chai | Cover | Dristy Anam | Tonmay Mahabubul | Fagun Haway(2019)Tomake Chai | Cover | Dristy Anam | Tonmay Mahabubul | Fagun Haway(2019)</p>
+                            <span>2 hours ago</span></a>
                         </div>
 
                         <div class="notic-card-banner">
-                            <img src="asstes/img/chanel.jpg" alt="images">
+                            <a href="#"><img src="asstes/img/chanel.jpg" alt="images"></a>
                         </div>
 
                         <div class="notic-card-icon">
-                            <span onclick="noticcardicon(); "><i class="fas fa-ellipsis-v"></i></span>
+                            <span onclick="noticcardicon(${i}); "><i class="fas fa-ellipsis-v"></i></span>
                         </div>
                     </div>
-                </a>
+
+                    <!-- notificationHideIconMenu -->
+                    <div class="notificationHideIconMenu" id="notificationHideIconMenu_${i}">
+                        <ul>
+                            <li><a href="#"><span><i class="fas fa-eye-slash"></i></span> Hide this notification</a></li>
+                            <li><a href="#"><span style="opacity:0;"><i class="fas fa-eye-slash"></i></span> Turn off all from The Net Ninja</a></li>
+                        </ul>
+                    </div>
+                </div>
             
             `
     }
@@ -510,7 +518,18 @@
     } 
 
     //nocificationCardItems 
-
+    let notificards = document.getElementsByClassName("notificationHideIconMenu");
+    for( notificard of notificards ){
+        notificard.style.display = "none";
+    }
+    function noticcardicon(id){
+        let notificardList = document.getElementById(`notificationHideIconMenu_${id}`);
+        if(notificardList.style.display === "none"){
+            notificardList.style.display = "block";
+        }else{
+            notificardList.style.display = "none";
+        }
+    } 
 
     </script>
   </body>

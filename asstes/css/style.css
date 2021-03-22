@@ -179,6 +179,7 @@ ul {
 }
 
 .notic-card-list {
+    position: relative;
     padding: .75rem 15px !important;
 }
 
@@ -226,8 +227,40 @@ ul {
 
 .notic-card-list:hover .notic-card-icon {
     opacity: 1;
+    cursor: pointer;
 }
 
+/* notificationHideIconMenu */
+.notification-Card {
+    position: relative;
+}
+
+.notificationHideIconMenu {
+    background: #fffcfcfa;
+    position: absolute;
+    right: 6px;
+    text-align: start;
+    bottom: -22px;
+    padding: 8px 0px;
+    border-radius: 5px;
+    border: 1px solid #e6e3e3;
+    box-shadow: 0px 0px 5px 0px #d8d4d4a8;
+    z-index: 28;
+    content: "";
+    outline: none;
+}
+
+.notificationHideIconMenu ul>li {
+    padding: 4px 22px;
+}
+
+.notificationHideIconMenu ul>li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.notificationHideIconMenu ul>li>a>span {
+    margin-right: 20px;
+}
 
 /*=====================================> main-content <=================================*/
 
@@ -537,7 +570,6 @@ ul {
         width: 512px;
         top: 50px !important;
         right: 15px;
-        background-color: green
     }
 
 }
@@ -587,7 +619,6 @@ ul {
         width: 400px;
         top: 50px !important;
         right: 7px;
-        background-color: red;
     }
 }
 
@@ -600,7 +631,6 @@ ul {
         width: 352px;
         top: 50px !important;
         right: 15px;
-        background-color: green
     }
 
 }
@@ -624,6 +654,5 @@ ul {
         width: 350px;
         top: 50px !important;
         right: 4px;
-        background-color: red;
     }
 }
