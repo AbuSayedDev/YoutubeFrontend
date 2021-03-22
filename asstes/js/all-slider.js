@@ -30,7 +30,7 @@ $('#responsive').slick({
           centerPadding: '40px',
           infinite: true,
           dots: false,
-          arrows: true
+          arrows: false
         }
       },
       {
@@ -39,7 +39,8 @@ $('#responsive').slick({
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: false
+          dots: false,
+          arrows: false
         }
       }
       // You can unslick at a given breakpoint now by adding:
